@@ -1,0 +1,63 @@
+Django Installation
+
+Open Command Prompt
+//install django
+pip install django
+
+------------------------
+
+Start new Django project
+
+//check the list available subcommands
+django-admin
+
+Navigate to the desired location in the file directory
+
+//start new project
+django-admin startproject mysite
+
+startproject command creates new directory by the name of the project mysite
+
+------------------------
+
+Django considers all projects to be collection of apps
+Our project directory is called mysite and mysite is also the primary app
+Role of the primary app is to link other apps
+Besides managing settings and urls not much is done there
+
+Add an app to our project
+
+We use manage.py helper python script to start new app
+Navigate to the directory where manage.py is located
+Enter the command --> python manage.py startapp main <-- to start new app
+A new directory by the name of main is created at the location
+
+Project Structure
+
+mysite
+    -main (directory, your new app)
+    -mysite (directory, this is your "primary" app)
+    -manage.py (helper python script)
+
+Run server using manage.py
+
+Open another Command Prompt window
+Enter the command --> python manage.py runserver <-- to run the server
+We will see something like
+/////
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 15 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+January 10, 2019 - 18:50:09
+Django version 2.1.5, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+/////
+Our development server is running at http://127.0.0.1:8000
+Open web browser and to that address
+Keep the server running in the separate command prompt window
+
+Django uses Model View Controller (MVC) paradigm
