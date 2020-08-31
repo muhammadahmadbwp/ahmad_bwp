@@ -4,7 +4,6 @@
     <link href="{% static 'tiny/css/prism.css' %}" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link href="{% static 'main/css/materialize.css' %}" rel="stylesheet">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
@@ -12,19 +11,15 @@
 
 <body>
 
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Tutorials</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Register</a></li>
-            <li><a href="/">Login</a></li>
-          </ul>
-        </div>
-    </nav>
-     
+{% include "main/include/navbar.html" %}
+
+{% include "main/include/messages.html" %}
+  
+  <div class="container">
+    <br>
     {% block content %}
     {% endblock %}
+  </div>
 
 </body>
 
